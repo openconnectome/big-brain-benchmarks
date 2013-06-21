@@ -1,0 +1,199 @@
+\documentclass[12pt]{article}
+\input{latex_document}
+
+\usepackage{wrapfig}
+\usepackage{sidecap}
+
+\title{\vspace{-75pt}Big Brain Benchmarks}
+\author{}
+\date{}
+
+\begin{document}
+{\vspace{-100pt}
+\maketitle
+}\setcounter{tocdepth}{2}
+\tableofcontents
+
+\begin{abstract}
+\end{abstract}
+
+\newpage
+\section{Introduction}
+
+\section{Preliminaries} \label{sec:methods}
+
+\subsection{Pre-processing}
+
+
+\subsubsection{CPAC}
+
+
+\subsubsection{NIAK}
+
+
+\subsubsection{Something else}
+
+
+\subsection{Notation}
+
+
+
+\subsection{Reproducibility and Extensibility}
+
+
+Website for this work including leaderboards: \url{www.bigbrainbenchmarks.org}.
+
+Python package for download data and running all algorithms: 
+
+Direct link to download data:
+
+\section{Inference Tasks}
+\subsection{Testing}
+
+
+\subsubsection{Data}
+
+We use the data from \cite{Elkund2013} for testing, which is the 1000 Functional Connectome Project Data.
+
+\subsubsection{Algorithms}
+
+\begin{itemize} \itemsep0pt
+	\item t-test:
+	\item rank-sum test:
+	\item wilcoxon:
+	\item Lq-test: 
+\end{itemize}
+
+
+\subsubsection{Performance Metrics}
+
+
+False positive and false negative rates as well as computational time.
+
+
+\subsection{Classification}
+
+\subsubsection{Data}
+
+ABIDE \cite{abide}, autistic or not.
+
+\subsubsection{Algorithms}
+
+\begin{itemize} \itemsep0pt
+	\item Linear Discriminant Analysis (LDA) $\circ$ embedding:
+	\item Quadratic Discriminant Analysis (QDA) $\circ$ embedding:
+	\item Support Vector Machine (SVM):
+	\item Random Forest (RF):
+	\item $k$-Nearest Neighbor: 
+\end{itemize}
+
+For embeddings, we consider:
+\begin{itemize} \itemsep0pt
+	\item PCA:
+	\item Random Projections:
+	\item Iterative Denoising Trees: 
+\end{itemize}
+
+\subsubsection{Performance Metrics}
+
+
+\begin{itemize} \itemsep0pt
+	\item Area Under Curve (AUC): Though see \cite{Hand2010}
+	\item Npairs: 
+\end{itemize}
+
+\subsection{Regression}
+
+\subsubsection{Data}
+
+ABIDE \cite{abide} age.
+
+
+\subsubsection{Algorithms}
+
+\begin{itemize} \itemsep0pt
+	\item Ridge Regression (RR):
+	\item Linear with Total Variation Penalty (LTV): for spatial and temporal smoothing
+	\item Support Vector Regression (SVR):
+	\item $k$-Nearest Neighbor Regression: 
+\end{itemize}
+
+
+\subsubsection{Performance Metrics}
+
+
+\subsection{Time-Series Prediction}
+
+\subsubsection{Data}
+
+\subsubsection{Algorithms}
+
+\begin{itemize} \itemsep0pt
+	\item Vector Auto-Regression (VAR):
+	\item Kalman Filter-Smoother (KFS):
+	\item Support Vector Regression (SVR): 
+\end{itemize}
+
+\subsubsection{Performance Metrics}
+
+\begin{itemize} \itemsep0pt
+	\item Integrated L2 error for $t$ time steps ahead: 
+\end{itemize}
+
+
+
+\subsection{Clustering}
+
+Cameron wanted some unsupervised something in here.
+
+\subsubsection{Data}
+
+NKI Test-Retest Data.  We clustering time-series of each individual to parcellate the brain.
+
+\subsubsection{Algorithms}
+
+\begin{itemize} \itemsep0pt
+	\item k-means:
+	\item Spectral Clustering:
+	\item METIS: 
+\end{itemize}
+
+\subsubsection{Performance Metrics}
+
+Something like reliability, e.g.:
+
+\begin{enumerate} \itemsep0pt
+	\item run each clustering algorithm separately on each scan
+	\item compute cluster similarity metric to compare each scan ($2 \times n$), where $n$ is the number of subjects
+	\item rank each scan according to its ordering relative to the other scan for that individual
+	\item cluster performance is the sum of ranks for each algorithm
+\end{enumerate} 
+
+
+
+
+
+\section{Results} \label{sec:results}
+
+\subsection{Testing}
+
+\subsection{Classification}
+
+\subsection{Regression}
+
+\subsection{Time-Series Prediction}
+
+
+\subsection{Clustering}
+
+\section{Discussion} \label{sec:disc}
+
+
+\newpage
+\small{
+\bibliography{library}
+\bibliographystyle{IEEEtran}
+}
+
+
+\end{document}
