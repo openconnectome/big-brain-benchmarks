@@ -1,0 +1,12 @@
+.DS_Store
+*.fls
+*.fmt
+*.ini
+*.log
+*.out
+*.toc
+*.aux
+big-brain-benchmakrs.pdf
+*.brf
+*.blg
+
